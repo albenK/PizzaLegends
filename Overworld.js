@@ -17,7 +17,9 @@ class Overworld {
             // draw game objects
             const gameObjects = Object.values(this.map.gameObjects);
             gameObjects.forEach((gameObject) => {
-               gameObject.xPos += 1;
+               gameObject.update({
+                
+               });
                 gameObject.sprite.draw(this.context);
             });
 
