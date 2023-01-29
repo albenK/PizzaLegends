@@ -44,7 +44,7 @@ window.OverworldMaps = {
         gameObjects: {
             hero: new GameObject({
                 xPos: 3,
-                yPos: 4,
+                yPos: 5,
                 spriteSrc: './images/characters/people/hero.png',
                 isShowingShadow: true
             }),
@@ -55,8 +55,8 @@ window.OverworldMaps = {
                 isShowingShadow: true
             }),
             npc2: new GameObject({
-                xPos: 6,
-                yPos: 4,
+                xPos: 11,
+                yPos: 7,
                 spriteSrc: './images/characters/people/npc2.png',
                 isShowingShadow: true
             })
