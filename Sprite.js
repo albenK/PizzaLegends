@@ -31,9 +31,8 @@ class Sprite {
     }
 
     draw(context) {
-        // multiply by 16 because each tile is 16px.
-        const xPos = (this.gameObject.xPos * 16) - 8; // Subtract 8px to center horizontally within tile.
-        const yPos = (this.gameObject.yPos * 16) - 18; // Subtract 18px to center vertically within tile.
+        const xPos = this.gameObject.xPos - 8; // Subtract 8px to center horizontally within tile.
+        const yPos = this.gameObject.yPos - 18; // Subtract 18px to center vertically within tile.
 
         if (this.isShadowLoadedInMemory) {
             context.drawImage(this.shadowImage, xPos, yPos);

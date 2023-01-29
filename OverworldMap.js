@@ -25,17 +25,17 @@ window.OverworldMaps = {
         upperImageSrc: './images/maps/DemoUpper.png',
         gameObjects: {
             hero: new GameObject({
-                xPos: 2,
-                yPos: 5,
+                xPos: utils.withGrid(2),
+                yPos: utils.withGrid(5),
                 spriteSrc: './images/characters/people/hero.png',
                 isShowingShadow: true
             }),
-            npc: new GameObject({
-                xPos: 5,
-                yPos: 6,
-                spriteSrc: './images/characters/people/npc1.png',
-                isShowingShadow: true
-            })
+            // npc: new GameObject({
+            //     xPos: utils.withGrid(5),
+            //     yPos: utils.withGrid(6),
+            //     spriteSrc: './images/characters/people/npc1.png',
+            //     isShowingShadow: true
+            // })
         }
     },
     Kitchen: {
@@ -43,20 +43,20 @@ window.OverworldMaps = {
         upperImageSrc: './images/maps/KitchenUpper.png',
         gameObjects: {
             hero: new GameObject({
-                xPos: 3,
-                yPos: 5,
+                xPos: utils.withGrid(3),
+                yPos: utils.withGrid(5),
                 spriteSrc: './images/characters/people/hero.png',
                 isShowingShadow: true
             }),
             npc: new GameObject({
-                xPos: 7,
-                yPos: 6,
+                xPos: utils.withGrid(7),
+                yPos: utils.withGrid(6),
                 spriteSrc: './images/characters/people/npc1.png',
                 isShowingShadow: true
             }),
             npc2: new GameObject({
-                xPos: 11,
-                yPos: 7,
+                xPos: utils.withGrid(11),
+                yPos: utils.withGrid(7),
                 spriteSrc: './images/characters/people/npc2.png',
                 isShowingShadow: true
             })

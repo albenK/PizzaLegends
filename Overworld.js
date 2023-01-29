@@ -17,7 +17,7 @@ class Overworld {
             // draw game objects
             const gameObjects = Object.values(this.map.gameObjects);
             gameObjects.forEach((gameObject) => {
-                gameObject.xPos += 0.01; // TODO: Change this to reflect each tile (16px)
+               gameObject.xPos += 1;
                 gameObject.sprite.draw(this.context);
             });
 
@@ -31,7 +31,7 @@ class Overworld {
     }
 
     init() {
-        this.map = new OverworldMap(window.OverworldMaps.Kitchen);
+        this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
         this.startGameLoop();
     }
 }
