@@ -12,13 +12,16 @@ class Person extends GameObject {
     }
 
     updatePosition() {
-        const isAbleToMoveToDesiredTile = this.remainingMovementProgress > 0;
-        if (isAbleToMoveToDesiredTile) {
+        // A Person can only move 16px in any direction. During this process,
+        // they will not be allowed to move. Once they reach the destination (16px),
+        // then they can move to another direction.
+        const isAtDestination = this.remainingMovementProgress > 0;
+        if (isAtDestination) {
             const [xOrY, change] = this.directionUpdate[this.direction];
             if (xOrY === 'x') {
-
+                this.xPos += change;
             } else {
-                
+                this.yPos += change;
             }
         }
     }
