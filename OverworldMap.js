@@ -24,7 +24,7 @@ window.OverworldMaps = {
         lowerImageSrc: './images/maps/DemoLower.png',
         upperImageSrc: './images/maps/DemoUpper.png',
         gameObjects: {
-            hero: new GameObject({
+            hero: new Person({
                 xPos: utils.withGrid(2),
                 yPos: utils.withGrid(5),
                 spriteSrc: './images/characters/people/hero.png',
