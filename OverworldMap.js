@@ -24,30 +24,26 @@ window.OverworldMaps = {
         lowerImageSrc: './images/maps/DemoLower.png',
         upperImageSrc: './images/maps/DemoUpper.png',
         gameObjects: {
+            npc: new Person({
+                xPos: utils.withGrid(5),
+                yPos: utils.withGrid(6),
+                spriteSrc: './images/characters/people/npc1.png',
+                isShowingShadow: true
+            }),
             hero: new Person({
                 xPos: utils.withGrid(2),
                 yPos: utils.withGrid(5),
                 spriteSrc: './images/characters/people/hero.png',
-                isShowingShadow: true
+                isShowingShadow: true,
+                isPlayerControlled: true
             }),
-            // npc: new GameObject({
-            //     xPos: utils.withGrid(5),
-            //     yPos: utils.withGrid(6),
-            //     spriteSrc: './images/characters/people/npc1.png',
-            //     isShowingShadow: true
-            // })
+            
         }
     },
     Kitchen: {
         lowerImageSrc: './images/maps/KitchenLower.png',
         upperImageSrc: './images/maps/KitchenUpper.png',
         gameObjects: {
-            hero: new GameObject({
-                xPos: utils.withGrid(3),
-                yPos: utils.withGrid(5),
-                spriteSrc: './images/characters/people/hero.png',
-                isShowingShadow: true
-            }),
             npc: new GameObject({
                 xPos: utils.withGrid(7),
                 yPos: utils.withGrid(6),
@@ -59,6 +55,13 @@ window.OverworldMaps = {
                 yPos: utils.withGrid(7),
                 spriteSrc: './images/characters/people/npc2.png',
                 isShowingShadow: true
+            }),
+            hero: new Person({
+                xPos: utils.withGrid(3),
+                yPos: utils.withGrid(5),
+                spriteSrc: './images/characters/people/hero.png',
+                isShowingShadow: true,
+                isPlayerControlled: true
             })
         }
     }

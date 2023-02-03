@@ -17,9 +17,9 @@ class Overworld {
             // draw game objects
             const gameObjects = Object.values(this.map.gameObjects);
             gameObjects.forEach((gameObject) => {
-               gameObject.update({
-                
-               });
+                gameObject.update({
+                    direction: this.directionInput.getCurrentDirection()
+                });
                 gameObject.sprite.draw(this.context);
             });
 
@@ -34,6 +34,8 @@ class Overworld {
 
     init() {
         this.map = new OverworldMap(window.OverworldMaps.DemoRoom);
+        this.directionInput = new DirectionInput();
+        this.directionInput.init();
         this.startGameLoop();
     }
 }

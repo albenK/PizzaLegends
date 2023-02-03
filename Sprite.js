@@ -25,7 +25,7 @@ class Sprite {
             ]
         };
         this.currentAnimationKey = config.currentAnimationKey || 'idleDown'; // must be a key within this.animations
-        this.currentAnimationFrameIndex = 0; // refers to the index of the current frame. Array within frames
+        this.currentAnimationFrameIndex = 0; // refers to the index of the current frame.
     
         this.gameObject = config.gameObject;
     }

@@ -2,7 +2,7 @@ class GameObject {
     constructor(config) {
         this.xPos = config.xPos || 0;
         this.yPos = config.yPos || 0;
-        this.direction = config.direction || 'DOWN';
+        this.direction = config.direction || utils.directions.DOWN;
         this.sprite = new Sprite({
             spriteSrc: config.spriteSrc,
             isShowingShadow: config.isShowingShadow,
