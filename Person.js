@@ -16,10 +16,10 @@ class Person extends GameObject {
 
     update(state) {
         this.updatePosition();
-
+        this.updateSprite(state);
         const isAtDestination = this.remainingMovementProgress === 0;
-        const directionExists = !!state.direction;
-        if (this.isPlayerControlled && isAtDestination && directionExists) {
+        const incomingDirectionExists = !!state.direction;
+        if (this.isPlayerControlled && isAtDestination && incomingDirectionExists) {
             this.direction = state.direction;
             this.remainingMovementProgress = 16;
         }
@@ -37,7 +37,18 @@ class Person extends GameObject {
             } else {
                 this.yPos += change;
             }
-            this.remainingMovementProgress--; // Subtract 1 since this person has moved 16px.
+            this.remainingMovementProgress-- // Subtract 1 since this person has moved a "step".
+        }
+    }
+
+    updateSprite(state) {
+        const isMovementInProgress = this.remainingMovementProgress > 0;
+        const incomingDirectionExists = !!state.direction;
+        if (isMovementInProgress && incomingDirectionExists) {
+            this.sprite.setAnimation('WALK_' + this.direction);
+        }
+        else if (!isMovementInProgress && !incomingDirectionExists) {
+            this.sprite.setAnimation('IDLE_' + this.direction);
         }
     }
 }
